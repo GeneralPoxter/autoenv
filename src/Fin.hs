@@ -30,7 +30,7 @@ instance ToInt (Fin n) where
    toInt (FS x) = 1 + toInt x
 
 
--- >>> [minBound .. maxBound] :: [Fin Three]
+-- >>> [minBound .. maxBound] :: [Fin N3]
 -- [0,1,2]
 
 instance (n ~ S m, SNatI m) => Bounded (Fin n) where
@@ -64,8 +64,8 @@ instance SNatI n => Arbitrary (Fin n) where
 
 -- list all numbers up to some size
 
--- >>> enumFin snat3
--- Variable not in scope: snat3 :: SNat n_aa82F[sk:1]
+-- >>> enumFin s3
+-- [0,1,2]
 
 enumFin :: SNat n -> [Fin n]
 enumFin SZ = []
