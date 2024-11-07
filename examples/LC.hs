@@ -173,7 +173,7 @@ b0 = bind1 (Var f0)
 -- λ. 0
 
 {- Interesting:
-    `cons` (.:) in `up` shifts the `Var` index from f1 to f0
+    `cons` (.:) in `up` shifts the input `Var` index from f1 to f0
     `shift` accordingly shifts any output `Var` indices
       (after performing substitution) up by 1 index b/c
       we are now in the scope of a new lambda
